@@ -1,0 +1,609 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Inter", Helvetica, arial, sans-serif;
+    color: #202024;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+ ::-moz-selection {
+    background: #5051DB;
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background: #5051DB;
+    color: white;
+    text-shadow: none;
+}
+
+/*------------------------------------*\
+  #Elements
+\*------------------------------------*/
+
+/*
+    Elements: Images
+    ---
+    Default markup for images to make them responsive
+*/
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0 0 24px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 0 24px;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0 0 24px;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+    margin: 0 0 24px;
+}
+
+ul,
+ol {
+    padding-left: 24px;
+}
+
+li ul,
+li ol {
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-style: normal;
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+blockquote * {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+figcaption {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+    color: #3C3C42;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: LightGrey;
+    margin: 0 0 24px;
+}
+
+a {
+    color: #5051DB;
+    transition: all .1s ease-in-out;
+}
+
+a:visited,
+a:active {
+    color: #3E3EA8;
+}
+
+a:hover,
+a:focus {
+    color: #3E3EA8;
+}
+
+label,
+input {
+    display: block;
+}
+
+select {
+    width: 100%;
+}
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+
+.o-row {
+    position: relative;
+    padding: 24px 24px 0;
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 56.4em; /* 56.4 * 20px = 1128px */
+    width: 100%;
+}
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+    list-style: none;
+    padding: 0;
+}
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/*
+    Object: Hide accessible
+    ---
+    Accessibly hide any element
+*/
+
+.o-hide-accessible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+.c-main {
+    background-image: url("/img/jpg/mars_background.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+}
+
+.c-header {
+    color: white;
+    text-align: center;
+}
+
+.c-header__title {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 40px 0 0;
+}
+
+.c-header__text {
+    max-width: 526px;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 20px;
+}
+
+.c-header__mockup {
+    max-width: 380px;
+    display: block;
+    margin: 16px auto;
+}
+
+.c-content {
+    color: white;
+    text-align: center;
+}
+
+.c-content__title {
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 24px 0 8px;
+    padding: 0;
+}
+
+.c-content__text {
+    max-width: 526px;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 20px;
+}
+
+.c-content__img {
+    max-width: 480px;
+    display: block;
+    margin: 16px auto 0;
+}
+
+/*
+    Component: App
+    ---
+    Main app of the website
+*/
+
+.c-app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/*
+    Component: Sol
+    ---
+    Sol of the website
+*/
+
+.c-sol {
+    background: rgba(44, 44, 44, 0.4);
+    color: white;
+    position: relative;
+    width: 352px;
+    margin: 16px 0;
+    padding: 8px;
+    font-size: 20px;
+}
+
+/* .c-sol:last-child {
+    grid-column: 1 / 5;
+} */
+
+.c-sol p {
+    padding: 0;
+    margin: 0;
+}
+
+.c-sol__information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.c-sol__information-presure {
+    grid-column: 1 / 3;
+}
+
+/*
+    Component: Celsius
+    ---
+    Celsius toggle of the website
+*/
+
+.c-celsius {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-celsius__text {
+    margin: 0;
+    margin-right: 8px;
+    color: white;
+    font-size: 20px;
+}
+
+.c-label {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+}
+
+.c-custom-toggle__fake-input {
+    display: block;
+    height: 24px;
+    width: 48px;
+    border-radius: 32px;
+    background: #edf4e4;
+    cursor: pointer;
+}
+
+.c-custom-toggle__fake-input::after {
+    position: relative;
+    display: block;
+    content: '';
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background: #8a8570;
+    transition: 70ms all ease-in;
+}
+
+.c-option--hidden:checked + .c-custom-toggle .c-custom-toggle__fake-input::after {
+    transform: translate(24px,0);
+}
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
+
+.u-color-neutral {
+    color: #7373F5;
+}
+
+.u-color-neutral-dark {
+    color: #5051DB;
+}
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+    padding-top: 0 !important;
+}
+
+.u-mb-clear {
+    margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+    margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+    margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+    margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+    margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+    margin-bottom: 48px !important;
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-xs {
+    max-width: 18em !important;
+}
+
+.u-max-width-sm {
+    max-width: 36em !important;
+}
+
+.u-max-width-md {
+    max-width: 42em !important;
+}
+
+.u-max-width-lg {
+    max-width: 60em !important;
+}
+
+.u-max-width-xl {
+    max-width: 75em !important;
+}
+
+.u-max-width-none {
+    max-width: none !important;
+}
+
+
+
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    USE THEM INLINE!
+*/
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in mobile first design
+*/
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
+
+/*
+    Print styles.
+    ---
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+        http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
