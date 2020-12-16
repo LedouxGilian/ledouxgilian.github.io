@@ -336,6 +336,14 @@ select {
         width: auto;
     } */
 
+    .c-header__text {
+        max-width: 326px;
+    }
+
+    .c-content__text {
+        max-width: 326px;
+    }
+
     .c-content__img {
         max-width: 330px;
         display: block;
