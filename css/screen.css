@@ -7,7 +7,8 @@
 \*------------------------------------*/
 :root {
     --global-text-color: white;
-
+    --global-select-color-light: #5051DB;
+    --global-select-color-dark: #3E3EA8;
 }
 
 /*------------------------------------*\
@@ -44,13 +45,13 @@ html {
  */
 
  ::-moz-selection {
-    background: #5051DB;
+    background: var(--global-select-color-light);
     color: var(--global-text-color);
     text-shadow: none;
 }
 
 ::selection {
-    background: #5051DB;
+    background: var(--global-select-color-light);
     color: var(--global-text-color);
     text-shadow: none;
 }
@@ -157,18 +158,18 @@ hr {
 }
 
 a {
-    color: #5051DB;
+    color: var(--global-select-color-light);
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: #3E3EA8;
+    color: var(--global-select-color-dark);
 }
 
 a:hover,
 a:focus {
-    color: #3E3EA8;
+    color: var(--global-select-color-dark);
 }
 
 label,
@@ -473,7 +474,7 @@ select {
 }
 
 .u-color-neutral-dark {
-    color: #5051DB;
+    color: var(--global-select-color-light);
 }
 
 /*
