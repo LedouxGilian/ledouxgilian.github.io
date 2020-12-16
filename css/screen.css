@@ -331,9 +331,15 @@ select {
 }
 
 @media (max-width:500px) {
-    .c-main {
+    /* .c-main {
         height: 100%;
         width: auto;
+    } */
+
+    .c-content__img {
+        max-width: 330px;
+        display: block;
+        margin: 8px auto 0;
     }
 }
 
